@@ -1,0 +1,22 @@
+[
+    {
+        "question": "How do I submit an assignment on this website?",
+        "answer": "To submit your assignment, log in to your account, click on the 'Submit Assignment' button, and follow the step-by-step instructions. You can upload your assignment document, provide any additional details, and confirm the submission."
+    },
+    {
+        "question": "Is my assignment data secure on this website?",
+        "answer": "Yes, we take data security seriously. Your assignment data is encrypted and stored securely on our servers. We have robust security measures in place to protect your information from unauthorized access."
+    },
+    {
+        "question": "Can I edit my submitted assignment after uploading it?",
+        "answer": "Once an assignment is submitted, only you can edit your assignment"
+    },
+    {
+        "question": "What file formats are accepted for assignment submissions?",
+        "answer": "We accept a variety of common file formats, including .doc, .docx, .pdf, .txt, and more. Please check our supported file formats list during the submission process for the most up-to-date information."
+    },
+    {
+        "question": "Is there a deadline for assignment submissions on this website?",
+        "answer": "The submission deadline depends on your assignment's due date, which is typically set by your educational institution. Please ensure you submit your assignment well in advance of the deadline to avoid any issues."
+    }
+]

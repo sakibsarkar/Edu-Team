@@ -1,0 +1,29 @@
+.box {
+    background: #bdbdbd;
+    width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.question {
+    padding: 17px 12px;
+    color: white;
+    background: #6440fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question .arrow {
+    font-size: 27px;
+}
+
+.answer {
+    background: #e4ddff;
+    padding: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+
+}
