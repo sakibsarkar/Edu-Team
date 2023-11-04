@@ -1,0 +1,57 @@
+.navWrapper {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background-color: #150047;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+
+
+nav ul li .navLinks {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.717);
+
+
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 11px 19px;
+    border-radius: 5px;
+}
