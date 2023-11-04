@@ -1,0 +1,90 @@
+.features {
+    height: 100vh;
+    padding: 50px 0;
+}
+
+.featureHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.featureHeading h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #8e6bf1;
+    position: relative;
+}
+
+.featureHeading h1::after {
+    content: "";
+    position: absolute;
+    left: -7px;
+    bottom: 3px;
+    width: 109%;
+    height: 2px;
+    background-color: #8e6bf1;
+}
+
+
+.featureHeading p {
+    font-size: 33px;
+    color: #294d7b;
+    width: 500px;
+    text-align: center;
+
+}
+
+
+
+.featureContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 50px;
+    justify-content: center;
+    margin: 57px 0 0 0;
+    transition: 0.5s;
+}
+
+.feature {
+    width: 300px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    gap: 29px;
+    flex-direction: column;
+    border-radius: 18px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.featureIcon {
+    transition: 0.6s;
+
+
+}
+
+.feature:hover .featureIcon {
+    transform: rotate3d(1, 1, 1, 360deg);
+}
+
+
+
+.featureDetails {
+    transition: 0.5s;
+}
+
+
+.featureDetails h1 {
+
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.featureDetails p {
+    font-size: 14px;
+}
