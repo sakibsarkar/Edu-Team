@@ -42,6 +42,13 @@
     right: -500px;
     z-index: 1;
     bottom: 15px;
+    animation: graphicAni infinite linear 60s;
+}
+
+@keyframes graphicAni {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 

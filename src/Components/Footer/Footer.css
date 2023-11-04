@@ -1,0 +1,76 @@
+footer {
+    background: rgba(64, 26, 161, 1);
+    padding: 50px 50px;
+}
+
+.footerHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #75757547;
+    padding: 0 0 10px 0;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.socialLinks a {
+    color: #ffffff70;
+    font-size: 20px;
+    border-radius: 50%;
+    background: #d7d7d740;
+    padding: 5px;
+}
+
+
+
+.footerLinks {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.ContactLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-start;
+    height: 220px;
+    font-size: 20px;
+}
+
+.ContactLinks .info {
+    color: #cfcfcf8c;
+}
+
+.ContactLinks h1 {
+    color: white;
+}
+
+
+.moreLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-start;
+    height: 220px;
+    font-size: 20px;
+}
+
+.moreLinks h1 {
+    color: white;
+}
+
+.moreLinks a {
+    color: #cfcfcf8c;
+}
+
+.moreLinks a :hover {
+    text-decoration: underline;
+}
