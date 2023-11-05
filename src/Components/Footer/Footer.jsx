@@ -70,10 +70,10 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
-            {/* 
+
             <div className="footerWave">
                 <img src="https://i.ibb.co/5YWtv8s/wave-1.png" />
-            </div> */}
+            </div>
 
             <div className="footerBottom">
                 <p>Copyrighted by <span className="text-[#ff912f] cursor-pointer">@eduteam.</span> All right reserved 2023</p>

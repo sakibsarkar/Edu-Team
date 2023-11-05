@@ -148,3 +148,15 @@ footer {
     bottom: 0;
     padding: 14px 0;
 }
+
+.footerWave {
+    position: absolute;
+    /* position related to form */
+    top: -189px;
+    left: 0;
+    z-index: -5;
+}
+
+.footerWave img {
+    width: 100vw;
+}
