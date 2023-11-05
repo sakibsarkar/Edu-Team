@@ -7,7 +7,7 @@ export const Authcontext = createContext(null)
 const AuthProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(true)
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState("")
     const [waitForUser, setWaitForUser] = useState(true)
 
 
@@ -15,6 +15,10 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         const provider = new GoogleAuthProvider()
         return signInWithPopup(auth, provider)
+    }
+
+    const logOut = () => {
+        return signOut(auth)
     }
 
 
@@ -35,7 +39,8 @@ const AuthProvider = ({ children }) => {
         loading,
         googleAuthentication,
         setWaitForUser,
-        user
+        user,
+        logOut
     }
 
 

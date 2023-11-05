@@ -2,15 +2,19 @@ import "./SocialAuthentication.css";
 import { useContext } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const SocialAuthentication = () => {
-    const { googleAuthentication } = useContext(Authcontext)
+    const { googleAuthentication, user } = useContext(Authcontext)
+    console.log(user)
+    const navigate = useNavigate()
 
     const mediaLogin = (media) => {
         media()
-            .then(res => console.log(res))
+            .then(res => {
+                navigate(location?.state ? location.state : "/")
+            })
     }
     return (
         <div className="socialAuthCon">

@@ -1,7 +1,15 @@
 import "./Login.css";
 import SocialAuthentication from "../../Components/SocialAuthentication/SocialAuthentication";
+import { useContext } from "react";
+import { Navigate } from "react-router-dom";
+import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
+
+    const { user } = useContext(Authcontext)
+    if (user) {
+        Navigate("/")
+    }
     return (
         <div className="authContainer">
             <div className="authWrapper">
