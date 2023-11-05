@@ -140,3 +140,123 @@ nav ul li .navLinks {
     font-size: 25px;
     cursor: pointer;
 }
+
+
+
+/* drawer */
+
+.menuIcon {
+    display: none;
+    font-size: 30px;
+    color: rgb(255, 255, 255)
+}
+
+.drawer {
+    display: none;
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    background: #614ead;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.drawerTop {
+    font-size: 27px;
+    /* text-align: center; */
+    float: right;
+    color: white;
+    background: #3818b5;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+
+.drawerUser {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+    background: #4306d3;
+}
+
+.drawer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+.drawerLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 50px 0 0 0;
+}
+
+.drawerLinks .navLinks {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.drawerLinks .active {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 400px) {
+    .drawer {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .logo {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    nav {
+        width: 90%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .userContainer {
+        display: none;
+    }
+
+    .drawer {
+        display: inline-block;
+    }
+
+    .menuIcon {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1380px) and (max-width: 1500px) {
+    nav {
+        width: 98%;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1620px) {
+    nav {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

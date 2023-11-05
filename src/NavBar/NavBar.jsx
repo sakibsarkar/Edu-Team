@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import useAxios from "../useAxios";
 import { useContext, useEffect, useState } from "react";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
 import { BsFillFilePersonFill } from "react-icons/bs";
 import { CgNotes } from "react-icons/cg";
 import { FaNotesMedical } from "react-icons/fa";
@@ -13,6 +13,7 @@ import { Authcontext } from "../AuthProvider/AuthProvider";
 const NavBar = () => {
     const { user, logOut } = useContext(Authcontext)
     const [showUserDetails, setShowUserDetails] = useState(false)
+    const [showDrawer, SetShowDrawer] = useState(false)
 
     const axios = useAxios()
 
@@ -42,14 +43,14 @@ const NavBar = () => {
         <div className="navWrapper">
             <nav>
                 <div>
-                    <img src="https://i.ibb.co/mHztTCN/EduLogo.png" />
+                    <img className="logo" src="https://i.ibb.co/mHztTCN/EduLogo.png" />
                 </div>
                 <ul>
                     <li className=""><NavLink className={"navLinks"} to={"/"}><AiOutlineHome /> Home</NavLink></li>
                     <li className=""><NavLink className={"navLinks"} to={"/assignments"}><CgNotes />Assignments</NavLink></li>
                     <li className=""><NavLink className={"navLinks"} to={"/createAssignments"}><FaNotesMedical /> Create Assignment</NavLink></li>
                     <li className=""><NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink></li>
-                    <li className=""><NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment Links</NavLink></li>
+                    <li className=""><NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment</NavLink></li>
                 </ul>
 
                 {/* user dynamic section */}
@@ -78,6 +79,40 @@ const NavBar = () => {
                         <p>|</p>
                         <Link to={"/signup"}>Register</Link>
                     </div>
+                }
+
+
+                <div className="menuIcon" onClick={() => SetShowDrawer(true)}>
+                    <AiOutlineMenu />
+                </div>
+
+                {
+                    showDrawer ? <div className="drawer">
+                        <div className="drawerTop" onClick={() => SetShowDrawer(false)}><RxCross2 /></div>
+
+                        {
+                            user ?
+                                <div className="drawerUser">
+                                    <img src={`${user?.photoURL}`} alt="" />
+
+                                </div> :
+                                ""
+                        }
+
+                        <div className="links">
+                            {user ? <h1>{user?.displayName}</h1> : ""}
+
+                            <div className="drawerLinks">
+                                <NavLink className={"navLinks"} to={"/"}><AiOutlineHome />Home</NavLink>
+                                <NavLink className={"navLinks"} to={"/assignments"}><CgNotes />Assignments</NavLink>
+                                <NavLink className={"navLinks"} to={"/createAssignments"}><FaNotesMedical /> Create Assignment</NavLink>
+                                <NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink>
+                                <NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment Links</NavLink>
+                            </div>
+                        </div>
+
+                    </div>
+                        : ""
                 }
             </nav>
         </div >
