@@ -8,7 +8,7 @@ const Footer = () => {
         <footer>
 
             <div className="footerHead">
-                <img src="https://i.ibb.co/mHztTCN/EduLogo.png" />
+                <img className="footerLogo" src="https://i.ibb.co/mHztTCN/EduLogo.png" />
                 <div className="socialLinks">
                     <a href="/"><BiLogoFacebook /> </a>
                     <a href="/"><GrTwitter /> </a>
@@ -51,7 +51,7 @@ const Footer = () => {
 
                     <div className="moreLinks">
                         <h1>Our Office</h1>
-                        <a href="/"><p>Road # 9, East kazipara, mirpur - 1, 1218</p></a>
+                        <a href="/"><p className="address">Road # 9, East kazipara, mirpur - 1, 1218</p></a>
                         <a href="/"><p>SUN -THUS | 10:00 - 06:00 </p></a>
 
 
