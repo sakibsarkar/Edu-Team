@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
-const SocialAuthentication = () => {
+const SocialAuthentication = ({ LOCATION }) => {
     const { googleAuthentication, user } = useContext(Authcontext)
     const axios = useAxios()
     const navigate = useNavigate()
@@ -17,7 +17,7 @@ const SocialAuthentication = () => {
 
             console.log(signin?.user.email)
             axios.post("/user/token", { email: signin?.user?.email ? signin?.user?.email : signin?.user?.displayName })
-            navigate(location?.state ? location.state : "/")
+            navigate(LOCATION?.state ? LOCATION.state : "/")
 
         }
         catch {

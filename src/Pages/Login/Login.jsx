@@ -44,7 +44,7 @@ const Login = () => {
                         <button type="submit">Log In</button>
                     </form>
 
-                    <SocialAuthentication></SocialAuthentication>
+                    <SocialAuthentication LOCATION={LOCATION}></SocialAuthentication>
                 </div>
                 <img src="https://i.ibb.co/wzWXS9T/login.jpg" />
             </div>
