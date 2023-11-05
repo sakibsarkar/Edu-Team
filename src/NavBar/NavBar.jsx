@@ -1,4 +1,5 @@
 import "./NavBar.css";
+import useAxios from "../useAxios";
 import { useContext, useEffect, useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsFillFilePersonFill } from "react-icons/bs";
@@ -13,6 +14,18 @@ const NavBar = () => {
     const { user, logOut } = useContext(Authcontext)
     const [showUserDetails, setShowUserDetails] = useState(false)
 
+    const axios = useAxios()
+
+
+    const handleLogout = async () => {
+        try {
+            const out = await logOut()
+            axios.post("/logout")
+        }
+        catch {
+            console.log("something error while logging out")
+        }
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -56,7 +69,7 @@ const NavBar = () => {
                                     <Link to={'/'}>Profile</Link>
                                     <Link to={'/myAssignments'}>My Assignments</Link>
                                     <Link to={'/createAssignments'}>Create Assignment</Link>
-                                    <button onClick={() => logOut()}>Log Out</button>
+                                    <button onClick={handleLogout}>Log Out</button>
                                 </div>
                             </div> : ""
                         }

@@ -1,0 +1,79 @@
+.registerCon {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerCon .registerForm {
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    padding: 20px 20px 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.registerCon .registerForm h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+    font-weight: 700;
+    color: #7f4aff;
+}
+
+
+.row {
+    width: 100%;
+}
+
+
+.row p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.row input {
+    /* background: #a58fff; */
+    border-bottom: 2px solid #a58fff;
+    color: rgb(0, 0, 0);
+    padding: 10px 25px 10px 2px;
+    width: 100%;
+    outline: none;
+}
+
+.row input::placeholder {
+    color: rgba(0, 0, 0, 0.391);
+}
+
+.row .brothers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.eye {
+    position: absolute;
+    right: 4px;
+    top: 48px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #6e3ce5;
+}
+
+.registerCon .registerForm button {
+    width: 100%;
+    background: #9d73ff;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.registerCon .registerForm button:hover {
+    background-color: #8856fc;
+    border-radius: 30px;
+}

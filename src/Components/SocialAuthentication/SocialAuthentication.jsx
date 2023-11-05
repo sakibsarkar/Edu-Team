@@ -1,4 +1,5 @@
 import "./SocialAuthentication.css";
+import useAxios from "../../useAxios";
 import { useContext } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -7,14 +8,21 @@ import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const SocialAuthentication = () => {
     const { googleAuthentication, user } = useContext(Authcontext)
-    console.log(user)
+    const axios = useAxios()
     const navigate = useNavigate()
 
-    const mediaLogin = (media) => {
-        media()
-            .then(res => {
-                navigate(location?.state ? location.state : "/")
-            })
+    const mediaLogin = async (media) => {
+        try {
+            const signin = await media()
+
+            console.log(signin?.user.email)
+            axios.post("/user/token", { email: signin?.user?.email ? signin?.user?.email : signin?.user?.displayName })
+            navigate(location?.state ? location.state : "/")
+
+        }
+        catch {
+            console.log("something wrong")
+        }
     }
     return (
         <div className="socialAuthCon">
