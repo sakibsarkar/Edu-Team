@@ -212,6 +212,13 @@ nav ul li .navLinks {
     text-decoration: underline;
 }
 
+.drawerLogoutBtn {
+    padding: 5px 10px;
+    color: white;
+    background: #ff3636;
+
+}
+
 
 @media screen and (max-width: 400px) {
     .drawer {
@@ -231,6 +238,10 @@ nav ul li .navLinks {
     }
 
     nav ul {
+        display: none;
+    }
+
+    .login {
         display: none;
     }
 

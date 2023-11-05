@@ -101,7 +101,7 @@ const NavBar = () => {
 
                         <div className="links">
                             {user ? <h1>{user?.displayName}</h1> : ""}
-                            {user ? <button onClick={handleLogout}>Log Out</button> : ""}
+                            {user ? <button onClick={handleLogout} className="drawerLogoutBtn">Log Out</button> : ""}
 
                             <div className="drawerLinks">
                                 <NavLink className={"navLinks"} to={"/"}><AiOutlineHome />Home</NavLink>
@@ -109,6 +109,8 @@ const NavBar = () => {
                                 <NavLink className={"navLinks"} to={"/createAssignments"}><FaNotesMedical /> Create Assignment</NavLink>
                                 <NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink>
                                 <NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment Links</NavLink>
+                                {user ? "" : <NavLink className={"navLinks"} to={"/login"}>Log in</NavLink>}
+                                {user ? "" : <NavLink className={"navLinks"} to={"/register"}>register</NavLink>}
                             </div>
                         </div>
 

@@ -1,5 +1,5 @@
 .features {
-    height: 100vh;
+    min-height: 100vh;
     padding: 50px 0;
 }
 
@@ -96,8 +96,8 @@
     }
 
     .featureHeading p {
-        font-size: 26px;
-        width: 393px;
+        font-size: 20px;
+        width: 380px;
     }
 }
 
