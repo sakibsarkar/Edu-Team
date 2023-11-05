@@ -13,7 +13,7 @@ const FaqBox = ({ faqData }) => {
             </div>
 
 
-            <div className="answer" style={showAnswer ? { width: "100%" } : { height: "0px", padding: "0" }}>
+            <div className="answer" style={showAnswer ? { height: "fit-content" } : { height: "0px", padding: "0" }}>
                 <p>{faqData?.answer}</p>
             </div>
 

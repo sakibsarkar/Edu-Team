@@ -1,6 +1,7 @@
 footer {
     background: rgba(64, 26, 161, 1);
     padding: 50px 50px;
+    position: relative;
 }
 
 .footerHead {
@@ -26,11 +27,20 @@ footer {
     padding: 5px;
 }
 
+.footerBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    gap: 28px;
+    padding: 50px 0;
+
+}
 
 
 .footerLinks {
     display: flex;
-    justify-content: start;
+    flex: 1;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
@@ -73,4 +83,68 @@ footer {
 
 .moreLinks a :hover {
     text-decoration: underline;
+}
+
+.footerForm form {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+}
+
+
+
+.footerForm {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    gap: 28px;
+    flex-direction: column;
+}
+
+
+.footerForm h1 {
+    color: white;
+    font-size: 20px;
+}
+
+
+.footerForm form input {
+    border: none;
+    outline: none;
+    background: #5a2bd1b8;
+    padding: 10px;
+    width: 100%;
+    color: white;
+}
+
+
+.footerForm form textarea {
+    border: none;
+    outline: none;
+    background: #5a2bd1b8;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    height: 120px;
+}
+
+.footerForm form button {
+    background: #5a2bd1b8;
+    padding: 5px 17px;
+    color: #999999;
+}
+
+
+.footerBottom {
+    background: #250281;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    bottom: 0;
+    padding: 14px 0;
 }

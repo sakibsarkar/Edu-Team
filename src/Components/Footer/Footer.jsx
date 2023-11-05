@@ -27,19 +27,57 @@ const Footer = () => {
                         <p className="info">+880 1723456789</p>
                     </div>
 
+
+
                     <div className="moreLinks">
-                        <h1>Some More Useful links</h1>
+                        <h1>Some Useful links</h1>
                         <a href="/"><p>Faq</p></a>
                         <a href="/"><p>Credits</p></a>
                         <a href="/"><p>About Us</p></a>
                         <a href="/"><p>Terms & conditions</p></a>
                     </div>
+
+
+
+
+                    <div className="moreLinks">
+                        <h1>Extra Links</h1>
+                        <a href="/"><p>Join our Community</p></a>
+                        <a href="/"><p>Wok with Us</p></a>
+                        <a href="/"><p>Get More Content</p></a>
+
+                    </div>
+
+
+                    <div className="moreLinks">
+                        <h1>Our Office</h1>
+                        <a href="/"><p>Road # 9, East kazipara, mirpur - 1, 1218</p></a>
+                        <a href="/"><p>SUN -THUS | 10:00 - 06:00 </p></a>
+
+
+                    </div>
+
+                </div>
+
+                <div className="footerForm">
+                    <h1>Say hello</h1>
+                    <form action="">
+                        <input type="text" name="name" placeholder="NAME" />
+                        <input type="email" name="email" placeholder="EMAIL" />
+                        <input type="tel" name="telNumber" placeholder="teliphone"></input>
+                        <textarea name="messege" placeholder="YOUR MESSEGE"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
             {/* 
             <div className="footerWave">
                 <img src="https://i.ibb.co/5YWtv8s/wave-1.png" />
             </div> */}
+
+            <div className="footerBottom">
+                <p>Copyrighted by <span className="text-[#ff912f] cursor-pointer">@eduteam.</span> All right reserved 2023</p>
+            </div>
         </footer>
     )
 };
