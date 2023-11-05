@@ -1,0 +1,77 @@
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+
+}
+
+.authWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    padding: 0 50px;
+}
+
+
+.authContainer img {
+    width: 400px;
+    padding: 20px;
+}
+
+.authForm {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.inputCon {
+    width: 100%;
+}
+
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 31px;
+}
+
+.authContainer .inputCon h1 {
+    font-size: 28px;
+    color: #390da0;
+    font-weight: 700;
+
+}
+
+
+
+
+
+
+
+.authForm input {
+    color: black;
+    width: 100%;
+    border-bottom: 1px solid #9468fd;
+    font-size: 22px;
+    outline: none;
+    padding: 2px 1px;
+    margin: 12px 0 0 0;
+}
+
+.authForm button {
+    background: #7138f9;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.authContainer button:hover {
+    border-radius: 30px;
+}

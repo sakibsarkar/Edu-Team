@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
 
             <div className="footerWave">
-                <img src="https://i.ibb.co/5YWtv8s/wave-1.png" />
+                <img src="https://i.ibb.co/Pct0cwv/wave-1.png" />
             </div>
 
             <div className="footerBottom">

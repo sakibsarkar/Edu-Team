@@ -1,4 +1,5 @@
 import "./index.css";
+import AuthProvider from "./AuthProvider/AuthProvider";
 import Home from "./Pages/Home/Home";
 import Layout from "./Layout/Layout";
 import Login from "./Pages/Login/Login";
@@ -26,6 +27,8 @@ const routes = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={routes} />
+    <AuthProvider>
+      <RouterProvider router={routes} />
+    </AuthProvider>
   </React.StrictMode>,
 )

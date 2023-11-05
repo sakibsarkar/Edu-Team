@@ -152,7 +152,7 @@ footer {
 .footerWave {
     position: absolute;
     /* position related to form */
-    top: -189px;
+    top: -222px;
     left: 0;
     z-index: -5;
 }

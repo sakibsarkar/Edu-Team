@@ -1,0 +1,26 @@
+.socialAuthCon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.socialBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 22px;
+    border: 1px solid #7b43ff;
+    padding: 4px 7px;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.socialBox:hover {
+    border-radius: 5px;
+}
