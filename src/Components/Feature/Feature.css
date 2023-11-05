@@ -88,3 +88,23 @@
 .featureDetails p {
     font-size: 14px;
 }
+
+
+@media screen and (max-width: 510px) {
+    .featureContainer {
+        grid-template-columns: repeat(1, 300px);
+    }
+
+    .featureHeading p {
+        font-size: 26px;
+        width: 393px;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 1030px) {
+    .featureContainer {
+        grid-template-columns: repeat(1, 300px);
+    }
+}
+
+@media screen and (min-width: 1921px) {}

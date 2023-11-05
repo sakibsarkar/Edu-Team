@@ -63,7 +63,7 @@ const CreateAssignment = () => {
         }
 
 
-        const assignment = { title, thumbURL, marks: parseInt(marks), description, uploadedBy: email, dueDate: submitedDate, status: "Pending" }
+        const assignment = { title, thumbURL, marks: parseInt(marks), description, uploadedBy: email, dueDate: submitedDate }
         axios.post("/user/assignment/post", assignment)
             .then(res => toast.success("success"))
             .catch(err => console.log(err))

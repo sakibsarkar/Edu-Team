@@ -101,6 +101,7 @@ const NavBar = () => {
 
                         <div className="links">
                             {user ? <h1>{user?.displayName}</h1> : ""}
+                            {user ? <button onClick={handleLogout}>Log Out</button> : ""}
 
                             <div className="drawerLinks">
                                 <NavLink className={"navLinks"} to={"/"}><AiOutlineHome />Home</NavLink>
