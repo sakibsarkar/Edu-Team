@@ -1,10 +1,12 @@
 import "./FaqBox.css";
+import { useContext } from "react";
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const FaqBox = ({ faqData }) => {
 
     const [showAnswer, setShowAnswer] = useState(false)
+
     return (
         <div className="box">
             <div className="question" onClick={() => setShowAnswer(!showAnswer)}>

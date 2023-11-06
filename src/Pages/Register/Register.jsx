@@ -54,7 +54,7 @@ const Register = () => {
         const loadingToast = toast.loading("trying to create account")
         createAccountWithEmail(email, password)
             .then(res => {
-                toast.dismiss(loadingToast)
+
 
                 updateProfile(res.user, {
                     displayName: userFullName,
@@ -62,12 +62,11 @@ const Register = () => {
                 })
                     .then(result => {
                         setWaitForUser(false)
-                        setToast(toast.success("successfuly account created"))
-                        console.log(res.user.email)
                         axios.post("/user/token", { email: res?.user?.email })
                             .then(res => {
+                                toast.dismiss(loadingToast)
                                 setToast(toast.success("successfuly account created"))
-                                navigate(naviGateLocation?.state ? naviGateLocation?.stat : "/")
+                                navigate(naviGateLocation?.state ? naviGateLocation?.state : "/")
                             })
 
                     })
@@ -120,7 +119,7 @@ const Register = () => {
                 </div>
                 <button type="submit">Register</button>
                 <h2>Already have an account? <Link className="text-[#743afd] underline cursor-pointer" to={"/login"}>Login</Link></h2>
-                <SocialAuthentication></SocialAuthentication>
+                <SocialAuthentication LOCATION={naviGateLocation}></SocialAuthentication>
             </form>
         </div>
     );

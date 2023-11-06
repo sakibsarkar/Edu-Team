@@ -180,6 +180,15 @@ footer {
         flex-wrap: wrap;
     }
 
+    .footerLogo {
+        width: 150px;
+    }
+
+    .footerBottom {
+        font-size: 14px;
+
+    }
+
     footer {
         padding: 50px 20px;
     }

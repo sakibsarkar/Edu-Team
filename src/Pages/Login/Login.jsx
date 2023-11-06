@@ -12,6 +12,7 @@ const Login = () => {
         setToast } = useContext(Authcontext)
     const axios = useAxios()
     const LOCATION = useLocation()
+    console.log(LOCATION)
     setNaviGateLocation(LOCATION)
     const navigate = useNavigate()
 
@@ -22,7 +23,7 @@ const Login = () => {
             .then(res => {
                 setToast(toast.success("Successfuly loged in"))
                 axios.post("/user/token", { email: res?.user?.email })
-                navigate(location.state ? location.state : "/")
+                navigate(LOCATION.state ? LOCATION.state : "/")
             })
             .catch(err => setToast(toast.error("invalid email or password")))
 

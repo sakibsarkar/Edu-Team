@@ -9,7 +9,7 @@ const Home = () => {
                 <p><span className="text-[#bbf100]">Welcome</span> to Assignment Central, your ultimate destination for hassle-free assignment submissions. We understand the demands of academic life, which is why we've created a platform that simplifies the submission process</p>
 
                 <div className="bannerButtons">
-                    <Link className="bgBtn" to={"/create-assignments"}>Create</Link>
+                    <Link className="bgBtn" to={"/createAssignments"}>Create</Link>
                     <Link className="borderBtn" to={"/assignments"}>Explore</Link>
                 </div>
 

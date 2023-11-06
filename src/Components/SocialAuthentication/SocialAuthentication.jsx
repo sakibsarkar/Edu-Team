@@ -7,8 +7,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const SocialAuthentication = ({ LOCATION }) => {
-    const { googleAuthentication, user } = useContext(Authcontext)
+   
+    const { googleAuthentication, gitHubAuthentication, user } = useContext(Authcontext)
     const axios = useAxios()
+    console.log(LOCATION)
     const navigate = useNavigate()
 
     const mediaLogin = async (media) => {
@@ -20,8 +22,8 @@ const SocialAuthentication = ({ LOCATION }) => {
             navigate(LOCATION?.state ? LOCATION.state : "/")
 
         }
-        catch {
-            console.log("something wrong")
+        catch (err) {
+            console.log(err)
         }
     }
     return (
@@ -31,7 +33,7 @@ const SocialAuthentication = ({ LOCATION }) => {
                 <p>Google</p>
             </div>
 
-            <div className="socialBox">
+            <div className="socialBox" onClick={() => mediaLogin(gitHubAuthentication)}>
                 <FaGithub></FaGithub>
                 <p>GitHub</p>
             </div>

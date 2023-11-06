@@ -39,14 +39,25 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    border-radius: 10PX;
     padding: 20px;
+
+}
+
+
+.assignmentCreateform button {
+    width: 100%;
+    background: #7825cb;
+    color: white;
+    padding: 5px 0;
+    font-size: 19px;
 
 }
 
 .assignmentCreateform input {
     width: 100%;
     padding: 10px;
-    background: #6a579b;
+    background: #7945ff;
     outline: none;
     color: white;
 }
@@ -61,7 +72,7 @@
 .assignmentCreateform textarea {
     width: 100%;
     padding: 10px;
-    background: #6a579b;
+    background: #7945ff;
     resize: none;
     height: 100px;
     outline: none;
@@ -93,7 +104,7 @@
 .bros select {
     width: 100%;
     height: 42px;
-    background: #6a579b;
+    background: #7945ff;
     color: white;
     padding: 0 5px;
     outline: none;

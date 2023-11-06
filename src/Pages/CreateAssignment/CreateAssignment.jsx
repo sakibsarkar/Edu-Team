@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import useAxios from "../../useAxios";
 import validUrl from "valid-url";
 import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const CreateAssignment = () => {
@@ -12,8 +13,8 @@ const CreateAssignment = () => {
     const [submitedDate, setSubmitedDate] = useState("")
     const [difficulty, setDificulty] = useState("Select")
     const { user } = useContext(Authcontext)
-
     const axios = useAxios()
+    const navigate = useNavigate()
     useEffect(() => {
         const today = new Date()
         const day = today.getDate()
@@ -45,6 +46,8 @@ const CreateAssignment = () => {
         const email = user?.email ? user.email : user.displayName
 
 
+        // url regex
+        const urlPattern = /^(http(s)?:\/\/)?(www\.)?[a-zA-Z0-9\.\-]+(\.[a-zA-Z]{2,}){1,2}(\/\S*)?$/;
 
         // words in title and description
         const titleWords = title.split(" ")
@@ -54,23 +57,40 @@ const CreateAssignment = () => {
             return toast.error("please give a valid url for Thubnail")
         }
 
+
+        if (!urlPattern.test(thumbURL)) {
+            return toast.error("please give a valid url for Thubnail")
+        }
+
+
+        if (parseInt(marks) > 60) {
+            return toast.error("marks shouldn't be more than 60")
+        }
+
+        if (marks.includes(".")) {
+            return toast.error("marks should be integer number")
+        }
+
         if (titleWords.length < 2) {
             return toast.error("assignment title should have atleast 2 words")
         }
 
-        if (descriptionWords.length < 5) {
-            return toast.error("Assignment description should have atleast 5 words")
+        if (descriptionWords.length < 10) {
+            return toast.error("Assignment description should have atleast 10 words")
+        }
+
+        if (difficulty == "Select") {
+            return toast.error("please select the defficulty level of the assignment")
         }
 
 
-        const assignment = { title, thumbURL, marks: parseInt(marks), description, uploadedBy: email, dueDate: submitedDate }
+        const assignment = { title, thumbURL, marks: parseInt(marks), description, uploadedBy: email, dueDate: submitedDate, difficulty: difficulty }
         axios.post("/user/assignment/post", assignment)
-            .then(res => toast.success("success"))
+            .then(res => {
+                toast.success("success")
+                navigate("/")
+            })
             .catch(err => console.log(err))
-
-
-
-
     }
 
     return (

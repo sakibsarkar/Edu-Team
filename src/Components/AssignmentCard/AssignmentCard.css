@@ -1,0 +1,48 @@
+.assignmentCard {
+    border-radius: 10px;
+    width: 350px;
+    overflow: hidden;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+}
+
+.assignmentImgBox {
+    width: 100%;
+    height: 230px;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.assignmentImgBox img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+
+.assignmentInfo {
+    padding: 20px 10px;
+}
+
+.assignmentInfo h1 {
+    font-size: 23px;
+    font-weight: 700;
+    color: #6a2bff;
+    height: 70px;
+}
+
+.assignmentBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0 0 0;
+}
+
+.assignmentBtns button {
+    color: white;
+    background-color: #7a42ff;
+    padding: 10px;
+}

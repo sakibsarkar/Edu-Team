@@ -19,6 +19,13 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
 
+
+    const gitHubAuthentication = () => {
+        setLoading(true)
+        const provider = new GithubAuthProvider()
+        return signInWithPopup(auth, provider)
+    }
+
     const logOut = () => {
         return signOut(auth)
     }
@@ -50,6 +57,7 @@ const AuthProvider = ({ children }) => {
     const items = {
         loading,
         googleAuthentication,
+        gitHubAuthentication,
         setWaitForUser,
         user,
         logOut,
@@ -57,7 +65,7 @@ const AuthProvider = ({ children }) => {
         createAccountWithEmail,
         toast,
         setToast,
-        naviGateLocation, 
+        naviGateLocation,
         setNaviGateLocation
     }
 
