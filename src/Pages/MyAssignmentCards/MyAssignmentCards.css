@@ -1,0 +1,17 @@
+.myAssignmentCard {
+    width: 500px;
+    background: #8654ff;
+    color: white;
+    padding: 20px;
+    border-radius: 17px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+}
+
+.myAssignmentCard p span {
+    font-weight: 700;
+    color: #ffb72d;
+}
+
+.myAssignmentCard p a {
+    text-decoration: underline;
+}

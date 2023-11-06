@@ -11,6 +11,7 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Register from "./Pages/Register/Register";
+import SubmittedAssignments from "./Pages/SubmittedAssignments/SubmittedAssignments";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
@@ -40,11 +41,15 @@ const routes = createBrowserRouter([
       },
       {
         path: "/myAssignments",
-        element: <MyAssignments></MyAssignments>
+        element: <PrivateRoute> <MyAssignments></MyAssignments></PrivateRoute>
       },
       {
         path: "/assignment/details/:id",
         element: <PrivateRoute><AssignmentDetails></AssignmentDetails></PrivateRoute>
+      },
+      {
+        path: "/subAssignments",
+        element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>
       }
 
     ]
@@ -59,3 +64,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </AuthProvider>
   </React.StrictMode>,
 )
+
+

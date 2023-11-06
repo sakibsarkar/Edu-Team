@@ -201,7 +201,7 @@ nav ul li .navLinks {
 
 .drawerLinks .navLinks {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 5px;
     font-size: 20px;
