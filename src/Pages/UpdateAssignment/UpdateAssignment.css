@@ -1,0 +1,84 @@
+.updateContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2e0a90;
+    background-image: linear-gradient(19deg, #5429ca 0%, #583fa8 100%);
+    flex-direction: column;
+    gap: 30px
+}
+
+
+.updateContainer>h1 {
+    font-size: 39px;
+    color: white;
+}
+
+.updateContainer form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    width: 500px;
+    gap: 20px;
+}
+
+.updateContainer form button {
+    background: #5737b7;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-size: 18px;
+    color: white;
+    border: 1px solid #5737b700;
+    transition: 0.3s;
+}
+
+.updateContainer form button:hover {
+    background-color: transparent;
+    width: 95%;
+    padding: 9.8px 0;
+    border: 1px solid #5737b7;
+    color: #5737b7;
+}
+
+.updateContainer form input {
+    width: 100%;
+    color: whitesmoke;
+    padding: 10px;
+    background: #8d67ff;
+    outline: none;
+}
+
+.updateContainer form textarea {
+    width: 100%;
+    background: #8d67ff;
+    color: white;
+    height: 150px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+.siblings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.siblings select {
+    width: 100%;
+    background: #8d67ff;
+    height: 43px;
+    color: white;
+    padding: 0 6px;
+}
+
+.siblings .react-datepicker-wrapper {
+    width: 100% !important;
+}

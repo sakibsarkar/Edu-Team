@@ -12,6 +12,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Register from "./Pages/Register/Register";
 import SubmittedAssignments from "./Pages/SubmittedAssignments/SubmittedAssignments";
+import UpdateAssignment from "./Pages/UpdateAssignment/UpdateAssignment";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
@@ -50,6 +51,11 @@ const routes = createBrowserRouter([
       {
         path: "/subAssignments",
         element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>
+      },
+      {
+        path: "/assignment/update/:id",
+        loader: (e) => fetch(`http://localhost:5000/api/assignment/${e.params.id}`, { credentials: "include" }),
+        element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>
       }
 
     ]
