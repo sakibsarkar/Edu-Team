@@ -10,15 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-pdf-viewer/core": "^3.12.0",
     "axios": "^1.6.0",
     "firebase": "^10.5.2",
     "follow-mouse": "^2.0.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
-    "pdfjs-dist": "^4.0.189",
+    "pdfjs-dist": "^3.4.120",
     "react": "^18.2.0",
     "react-datepicker": "^4.21.0",
     "react-dom": "^18.2.0",
+    "react-google-docs-viewer": "^1.0.1",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
     "react-loader-spinner": "^5.4.5",

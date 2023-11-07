@@ -60,7 +60,7 @@ const AssignmentDetails = () => {
         }
 
 
-        const data = { assignmentLink, submissionNote, submitedBy, submiterName, submitedOn: date, status: "pending", assignmentName: title }
+        const data = { assignmentLink, submissionNote, submitedBy, submiterName, submitedOn: date, status: "pending", assignmentName: title, totalMarks: marks, ObtainMarks: "pending" }
 
         axios.post("/assignment/submit", data)
             .then(res => {
