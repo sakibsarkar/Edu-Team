@@ -1,6 +1,9 @@
 import "./AssignmentCard.css";
 import toast from "react-hot-toast";
 import { useContext } from "react";
+import { AiFillDelete } from "react-icons/ai";
+import { LuView } from "react-icons/lu";
+import { MdEdit } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
@@ -44,8 +47,24 @@ const AssignmentCard = ({ data }) => {
                 </div>
 
                 <div className="assignmentBtns">
-                    <Link to={`/assignment/details/${_id}`}><button>View Assignment</button></Link>
-                    <button onClick={() => handleUpdateAssignment(uploadedBy)}>Update Assignment</button>
+                    {/* <Link to={`/assignment/details/${_id}`}><button>View Assignment</button></Link>
+                    <button onClick={() => handleUpdateAssignment(uploadedBy)}>Update Assignment</button> */}
+
+                    <div className="delete">
+                        <AiFillDelete className="assignmentIcon" />
+                        <p className="whatBtn">Delete Assignment</p>
+                    </div>
+
+                    <div className="edit">
+                        <MdEdit className="assignmentIcon" />
+                        <p className="whatBtn">Update Assignment</p>
+                    </div>
+
+                    <Link to={`/assignment/details/${_id}`}>
+                        <div className="view">
+                            <LuView className="assignmentIcon" />
+                            <p className="whatBtn">View Assignment</p>
+                        </div></Link>
                 </div>
             </div>
         </div>

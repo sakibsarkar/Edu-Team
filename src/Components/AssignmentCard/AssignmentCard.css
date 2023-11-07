@@ -35,14 +35,53 @@
 
 .assignmentBtns {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 15px;
     margin: 15px 0 0 0;
 }
 
-.assignmentBtns button {
+.assignmentIcon div .assignmentIcon {}
+
+
+.assignmentBtns div {
+    position: relative;
     color: white;
-    background-color: #7a42ff;
-    padding: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+.delete {
+    background-color: #f34949 !important;
+}
+
+.edit {
+    background-color: #2ed573 !important;
+}
+
+.view {
+    background-color: #ff723a !important;
+}
+
+.assignmentBtns div .whatBtn {
+    display: none;
+}
+
+.assignmentBtns div:hover .whatBtn {
+    display: inline-block;
+}
+
+.assignmentBtns div:hover {
+    width: 200px;
+    border-radius: 3px;
 }
