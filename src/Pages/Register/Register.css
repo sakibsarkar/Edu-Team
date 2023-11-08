@@ -77,3 +77,12 @@
     background-color: #8856fc;
     border-radius: 30px;
 }
+
+
+
+
+@media screen and (max-width: 500px) {
+    .registerCon .registerForm {
+        width: 95%;
+    }
+}

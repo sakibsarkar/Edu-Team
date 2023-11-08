@@ -111,7 +111,7 @@ const NavBar = () => {
                                 <NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink>
                                 <NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment Links</NavLink>
                                 {user ? "" : <NavLink className={"navLinks"} to={"/login"}>Log in</NavLink>}
-                                {user ? "" : <NavLink className={"navLinks"} to={"/register"}>register</NavLink>}
+                                {user ? "" : <NavLink className={"navLinks"} to={"/signup"}>register</NavLink>}
                             </div>
                         </div>
 

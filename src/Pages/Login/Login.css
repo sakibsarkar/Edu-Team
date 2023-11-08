@@ -86,3 +86,46 @@
 .authContainer button:hover {
     border-radius: 30px;
 }
+
+
+@media screen and (max-width: 470px) {
+    .authWrapper {
+        gap: 50px;
+        padding: 25px 15px;
+        width: 95%;
+    }
+
+    .authContainer img {
+        display: none;
+    }
+
+    .authForm {
+        width: 95%;
+    }
+
+    .itemContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 845px) {
+    .authWrapper {
+        gap: 50px;
+        padding: 25px;
+    }
+
+    .authContainer img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 845px) and (max-width: 1030px) {
+    .authWrapper {
+        gap: 50px;
+        padding: 25px;
+    }
+
+    .authContainer img {
+        width: 320px;
+    }
+}
