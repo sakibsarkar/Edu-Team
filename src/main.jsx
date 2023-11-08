@@ -54,7 +54,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/assignment/update/:id",
-        loader: (e) => fetch(`http://localhost:5000/api/assignment/${e.params.id}`, { credentials: "include" }),
+        loader: (e) => fetch(`https://assignment-11-server-eosin-alpha.vercel.app/api/assignment/${e.params.id}`, { credentials: "include" }),
         element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>
       }
 
@@ -66,10 +66,10 @@ const routes = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-      <AuthProvider>
-        <RouterProvider router={routes} />
-      </AuthProvider>
-   
+    <AuthProvider>
+      <RouterProvider router={routes} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )
 

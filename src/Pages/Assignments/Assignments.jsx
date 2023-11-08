@@ -16,6 +16,7 @@ const Assignments = () => {
     const [totalButton, setTotalButton] = useState(1)
     const [assignmentsData, setAssignmentsData] = useState([])
     const axios = useAxios()
+    const [reFetch, setReFetch] = useState(false)
 
 
     // const defineNumbersOfButton = useCallback(() => {
@@ -43,7 +44,7 @@ const Assignments = () => {
 
 
 
-    }, [currentPage, difficulty, axios, limit])
+    }, [currentPage, difficulty, axios, reFetch, limit])
 
 
 
@@ -115,7 +116,11 @@ const Assignments = () => {
                                             isDataLoading ? "" :
                                                 <>
                                                     {
-                                                        assignmentsData?.map(data => <AssignmentCard key={data._id} data={data}></AssignmentCard>)
+                                                        assignmentsData?.map(data => <AssignmentCard
+                                                            key={data._id}
+                                                            data={data}
+                                                            reFetc={reFetch}
+                                                            setReFetch={setReFetch}></AssignmentCard>)
                                                     }
                                                 </>
                                         }
@@ -157,7 +162,7 @@ const Assignments = () => {
 
 
 
-        </div>
+        </div >
     );
 };
 

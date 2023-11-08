@@ -6,6 +6,8 @@ const MyAssignmentCards = ({ assignments }) => {
 
     return (
         <div className="myAssignmentCard">
+            <p><span>Assignment Name</span> : {assignmentName}</p>
+            <p><span>Submited On</span> : {submitedOn}</p>
             <p><span>Submitted Link</span> : <a href={`${assignmentLink}`}>{assignmentLink}</a></p>
             <p><span>Note</span> : {submissionNote}</p>
             <p><span>Submitted On</span> : {submitedOn}</p>

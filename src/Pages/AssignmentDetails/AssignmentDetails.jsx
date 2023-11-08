@@ -32,10 +32,10 @@ const AssignmentDetails = () => {
     const { _id, title, thumbURL, marks, description, uploadedBy, dueDate, difficulty } = data ? data : {}
 
     if (showForm) {
-        document.body.style.overflow = "hidden"
+        document.body.classList.add("noScroll")
     }
     if (!showForm) {
-        document.body.style.overflow = "visible"
+        document.body.classList.remove("noScroll")
     }
 
     const handleSubmit = (e) => {
@@ -60,7 +60,7 @@ const AssignmentDetails = () => {
         }
 
 
-        const data = { assignmentLink, submissionNote, submitedBy, submiterName, submitedOn: date, status: "pending", assignmentName: title, totalMarks: marks, ObtainMarks: "pending" }
+        const data = { assignmentLink, submissionNote, submitedBy, submiterName, submitedOn: date, status: "pending", assignmentName: title, totalMarks: marks, ObtainMarks: "pending", feedback: "" }
 
         axios.post("/assignment/submit", data)
             .then(res => {

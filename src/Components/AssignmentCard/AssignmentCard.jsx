@@ -1,5 +1,6 @@
 import "./AssignmentCard.css";
 import toast from "react-hot-toast";
+import useAxios from "../../useAxios";
 import { useContext } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { LuView } from "react-icons/lu";
@@ -7,12 +8,12 @@ import { MdEdit } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
-const AssignmentCard = ({ data }) => {
+const AssignmentCard = ({ data, reFetch, setReFetch }) => {
     // console.log(Object.keys(data).join(","))
     const { user } = useContext(Authcontext)
     const navigate = useNavigate()
     const { _id, title, thumbURL, marks, description, uploadedBy, dueDate, difficulty } = data ? data : {}
-
+    const axios = useAxios()
 
     let assignmentName = title.split(" ")
     let name = title
@@ -25,13 +26,40 @@ const AssignmentCard = ({ data }) => {
     const handleUpdateAssignment = (email) => {
 
         if (!user) {
-            return toast.error("please log in first")
+            toast.error("please log in first")
+            return navigate(`/assignment/update/${_id}`)
         }
+
+
         if (email == currentUser) {
             return navigate(`/assignment/update/${_id}`)
         }
 
-        toast.error("you are not eligble to edit this assignment")
+        toast.error("you are not eligible to edit this assignment")
+
+    }
+
+    const handleDeleAssignment = (email) => {
+        console.log(email, currentUser)
+
+        if (!user) {
+            return toast.error("Log in to continue")
+        }
+
+        if (email !== currentUser) {
+            return toast.error("you are not eligible to delete this assignment")
+        }
+
+
+        axios.delete(`delete/assignment/${_id}`)
+            .then(res => {
+                toast.success("successfully deleted")
+                setReFetch(!reFetch)
+            })
+            .catch(err => {
+                toast.error("something wrong! please re-Login")
+            })
+
 
     }
     return (
@@ -50,12 +78,12 @@ const AssignmentCard = ({ data }) => {
                     {/* <Link to={`/assignment/details/${_id}`}><button>View Assignment</button></Link>
                     <button onClick={() => handleUpdateAssignment(uploadedBy)}>Update Assignment</button> */}
 
-                    <div className="delete">
+                    <div className="delete" onClick={() => handleDeleAssignment(uploadedBy)}>
                         <AiFillDelete className="assignmentIcon" />
                         <p className="whatBtn">Delete Assignment</p>
                     </div>
 
-                    <div className="edit">
+                    <div className="edit" onClick={() => handleUpdateAssignment(uploadedBy)}>
                         <MdEdit className="assignmentIcon" />
                         <p className="whatBtn">Update Assignment</p>
                     </div>

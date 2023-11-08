@@ -7,6 +7,11 @@
     box-shadow: 0 2px 16.8px 3.2px #00264214;
 }
 
+.myAssignmentCard p {
+    overflow: hidden;
+
+}
+
 .myAssignmentCard p span {
     font-weight: 700;
     color: #ffb72d;

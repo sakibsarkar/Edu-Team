@@ -7,10 +7,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const SocialAuthentication = ({ LOCATION }) => {
-   
+
     const { googleAuthentication, gitHubAuthentication, user } = useContext(Authcontext)
     const axios = useAxios()
-    console.log(LOCATION)
+
     const navigate = useNavigate()
 
     const mediaLogin = async (media) => {

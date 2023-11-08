@@ -85,3 +85,92 @@
     width: 200px;
     border-radius: 3px;
 }
+
+
+
+/* bannner */
+@media screen and (max-width: 470px) {
+    .assignmentsBanner h1 {
+        font-size: 60px;
+    }
+
+    .assignmentsBanner p {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .assignments {
+        justify-content: center;
+        grid-template-columns: repeat(1, 350px);
+        gap: 50px;
+    }
+
+    .filter {
+        width: 100vw;
+    }
+
+    .dataHeading h1 {
+        text-align: center;
+    }
+
+    .allAssignmentsContainer {
+        width: 100vw;
+    }
+}
+
+
+
+
+@media screen and (min-width: 400px) and (max-width: 765px) {
+    .assignments {
+        justify-content: center;
+        grid-template-columns: repeat(1, 350px);
+        gap: 50px;
+    }
+
+    .filter {
+        width: 100vw;
+    }
+
+    .dataHeading h1 {
+        text-align: center;
+    }
+
+    .allAssignmentsContainer {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 765px) and (max-width: 1115px) {
+    .assignments {
+        justify-content: center;
+        grid-template-columns: repeat(2, 350px);
+        gap: 50px;
+    }
+
+    .filter {
+        width: 100vw;
+    }
+
+    .dataHeading h1 {
+        text-align: center;
+    }
+
+    .allAssignmentsContainer {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1115px) and (max-width: 1240px) {
+    .assignments {
+        justify-content: center;
+    }
+
+    .allAssignmentsContainer {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

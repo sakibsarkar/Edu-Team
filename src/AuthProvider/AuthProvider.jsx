@@ -42,18 +42,20 @@ const AuthProvider = ({ children }) => {
 
 
     useEffect(() => {
-        const unsubcribe = () => {
-            onAuthStateChanged(auth, USER => {
-                setUser(USER)
-                setLoading(false)
-            })
-        }
 
-        return () => {
-            unsubcribe()
-        }
+        onAuthStateChanged(auth, USER => {
+            setUser(USER)
+            setLoading(false)
+        })
+
+
+        // return () => {
+        //     unsubcribe()
+        // }
 
     }, [waitForUser])
+
+
     const items = {
         loading,
         googleAuthentication,

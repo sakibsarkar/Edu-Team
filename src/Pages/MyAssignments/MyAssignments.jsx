@@ -29,28 +29,41 @@ const MyAssignments = () => {
 
     }, [axios, userEmail, navigate])
     return (
-        <div className="myAssignmentContainer">
-            <div className="head">
-                <p>your Submitted Assignments</p>
-            </div>
+        <>
 
             {
-                isLoading ?
-                    <div className="h-[70vh] flex justify-center items-center">
-                        <Oval></Oval>
-                    </div>
-                    :
-                    <div className="creationWrapper">
-                        <div className="myCreations">
-                            {
-                                data?.map((assignments) => <MyAssignmentCards key={assignments._id} assignments={assignments}></MyAssignmentCards>)
-                            }
-
+                data?.length > 0 ?
+                    <div className="myAssignmentContainer">
+                        <div className="head">
+                            <p>your Submitted Assignments</p>
                         </div>
+
+                        {
+                            isLoading ?
+                                <div className="h-[70vh] flex justify-center items-center">
+                                    <Oval></Oval>
+                                </div>
+                                :
+                                <div className="creationWrapper">
+                                    <div className="myCreations">
+                                        {
+                                            data?.map((assignments) => <MyAssignmentCards key={assignments._id} assignments={assignments}></MyAssignmentCards>)
+                                        }
+
+                                    </div>
+                                </div>
+                        }
+
                     </div>
+
+
+
+                    :
+
+                    ""
             }
 
-        </div>
+        </>
     );
 };
 

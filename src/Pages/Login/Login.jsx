@@ -12,7 +12,7 @@ const Login = () => {
         setToast } = useContext(Authcontext)
     const axios = useAxios()
     const LOCATION = useLocation()
-    console.log(LOCATION)
+
     setNaviGateLocation(LOCATION)
     const navigate = useNavigate()
 

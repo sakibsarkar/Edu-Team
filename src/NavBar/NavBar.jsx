@@ -22,6 +22,7 @@ const NavBar = () => {
         try {
             const out = await logOut()
             axios.post("/logout")
+                .catch(err => console.log(err))
         }
         catch {
             console.log("something error while logging out")
