@@ -52,6 +52,7 @@ const Assignments = () => {
 
 
     const handleChangeDefficulty = (e) => {
+        setCurrentPage(1)
 
         const data = e.target.value
         if (data == difficulty) {

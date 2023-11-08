@@ -88,7 +88,8 @@ const CreateAssignment = () => {
         axios.post("/user/assignment/post", assignment)
             .then(res => {
                 toast.success("success")
-                navigate("/assignments")
+                // navigate("/assignments")
+                form.reset()
             })
             .catch(err => toast.error("something went wrong"))
     }
