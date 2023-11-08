@@ -71,7 +71,7 @@ const AllSubmissionCard = ({ data }) => {
 
                             <div className="markActivity">
                                 <div className="markBox">
-                                    <input type="number" name="Obtainmark" placeholder="Giv Marks" required /> <p>/ {totalMarks}</p>
+                                    <input type="number" name="Obtainmark" placeholder="Give Marks" required /> <p>/ {totalMarks}</p>
                                 </div>
                                 <textarea name="feedback" placeholder="Give feedback"></textarea>
                             </div>
