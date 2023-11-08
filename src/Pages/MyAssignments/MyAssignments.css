@@ -28,3 +28,50 @@
     padding: 18px 0 0 0;
     color: white;
 }
+
+
+.noSubmission {
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 35px;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 400px) {
+    .myCreations {
+        grid-template-columns: repeat(1, 95%);
+        justify-content: center;
+
+    }
+
+    .myAssignmentCard {
+        width: 95%;
+
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 515px) {
+    .myCreations {
+        grid-template-columns: repeat(1, 400px);
+        justify-content: center;
+    }
+
+    .myAssignmentCard {
+        width: 500px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 515px) and (max-width: 1050px) {
+    .myCreations {
+        grid-template-columns: repeat(1, 500px);
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

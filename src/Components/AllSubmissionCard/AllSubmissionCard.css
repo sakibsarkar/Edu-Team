@@ -122,6 +122,11 @@
 
 }
 
+.giveMarkCon form>p {
+    overflow: hidden;
+    width: 100%;
+}
+
 
 .giveMarkCon form>p>span {
     font-weight: 700;
@@ -176,6 +181,22 @@
     height: 150px;
     outline: none;
     padding: 5px 10px;
+    resize: none;
+}
+
+.giveMarkCon form button {
+    background: #5303cf;
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0 2px 16.8px 3.2px #5303cf9c;
+    transition: 0.3s;
+}
+
+.giveMarkCon form button:hover {
+    width: 95%;
+    margin: auto;
+    padding: 8px 0;
 }
 
 .cancleGivingMark {
@@ -197,6 +218,52 @@
 @media screen and (min-width: 400px) and (max-width: 515px) {
     .pendingSubmissionCardCon {
         width: 98%;
+    }
+}
+
+/* preview  */
+@media screen and (max-width: 400px) {
+    .cancelPreView {
+        top: -45px;
+        right: 0;
+    }
+
+    .previewHolder {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 515px) {
+    .cancelPreView {
+        top: -45px;
+        right: 0;
+    }
+
+    .previewHolder {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 515px) and (max-width: 640px) {
+    .cancelPreView {
+        top: -45px;
+        right: 12px;
+    }
+}
+
+
+
+/* mark form */
+
+@media screen and (max-width: 400px) {
+    .giveMarkCon form {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 1000px) {
+    .giveMarkCon form {
+        width: 90%;
     }
 }
 

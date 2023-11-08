@@ -3,6 +3,7 @@ import AssignmentDetails from "./Pages/AssignmentDetails/AssignmentDetails";
 import Assignments from "./Pages/Assignments/Assignments";
 import AuthProvider from "./AuthProvider/AuthProvider";
 import CreateAssignment from "./Pages/CreateAssignment/CreateAssignment";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Home from "./Pages/Home/Home";
 import Layout from "./Layout/Layout";
 import Login from "./Pages/Login/Login";
@@ -19,6 +20,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

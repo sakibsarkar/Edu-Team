@@ -28,6 +28,7 @@ const MyAssignments = () => {
             })
 
     }, [axios, userEmail, navigate])
+    console.log(data)
     return (
         <>
 
@@ -60,7 +61,10 @@ const MyAssignments = () => {
 
                     :
 
-                    ""
+                    <div className="noSubmission">
+                        <img src="https://i.ibb.co/PDhKy3Q/data-search-not-found-illustration-concept-vector-prev-ui.png" />
+                        <h1>You have not submitted any assignments yet</h1>
+                    </div>
             }
 
         </>

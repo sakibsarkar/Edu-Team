@@ -120,3 +120,41 @@
     bottom: -65px;
     transform: rotate(180deg);
 }
+
+
+
+@media screen and (max-width: 400px) {
+
+
+    .createAssignmentCon>img {
+        display: none;
+    }
+
+    .assignmentCreateform {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 520px) {
+    .createAssignmentCon>img {
+        display: none;
+    }
+
+    .assignmentCreateform {
+        width: 95%;
+        margin: auto;
+    }
+
+    .createNew h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1170px) {
+    .createAssignmentCon>img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
