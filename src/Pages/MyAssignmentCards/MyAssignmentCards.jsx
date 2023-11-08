@@ -1,7 +1,7 @@
 import "./MyAssignmentCards.css";
 
 const MyAssignmentCards = ({ assignments }) => {
-    const { _id, assignmentLink, submissionNote, submitedBy, submiterName, submitedOn, status, assignmentName } = assignments ? assignments : {}
+    const { _id, ObtainMarks, assignmentLink, submissionNote, submitedBy, submiterName, submitedOn, status, assignmentName } = assignments ? assignments : {}
 
 
     return (
@@ -12,6 +12,7 @@ const MyAssignmentCards = ({ assignments }) => {
             <p><span>Note</span> : {submissionNote}</p>
             <p><span>Submitted On</span> : {submitedOn}</p>
             <p><span>Status</span> : {status}</p>
+            <p><span>Obtain Marks</span> : {ObtainMarks}</p>
         </div>
     );
 };
