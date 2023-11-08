@@ -1,7 +1,9 @@
 import "./SubmittedAssignments.css";
 import AllSubmissionCard from "../../Components/AllSubmissionCard/AllSubmissionCard";
+import toast from "react-hot-toast";
 import useAxios from "../../useAxios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // import "@react-pdf-viewer/core/lib/styles/index.css";
 // import pdf from "./pdf.pdf";
@@ -12,13 +14,17 @@ const SubmittedAssignments = () => {
     const axios = useAxios()
     const [data, setData] = useState([])
     const [refetch, setReFertch] = useState(false)
+    const navigate = useNavigate()
 
 
     useEffect(() => {
         axios.get("/users/submissions")
             .then(res => setData(res.data))
-            .catch(err => console.log(err))
-    }, [axios, refetch]
+            .catch(err => {
+                toast.error("something went Wrong")
+                navigate("/")
+            })
+    }, [axios, refetch, navigate]
     )
 
 
