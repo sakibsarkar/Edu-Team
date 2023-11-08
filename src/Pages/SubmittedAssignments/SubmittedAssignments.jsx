@@ -11,13 +11,14 @@ import { useEffect, useState } from "react";
 const SubmittedAssignments = () => {
     const axios = useAxios()
     const [data, setData] = useState([])
+    const [refetch, setReFertch] = useState(false)
 
 
     useEffect(() => {
         axios.get("/users/submissions")
             .then(res => setData(res.data))
             .catch(err => console.log(err))
-    }, [axios]
+    }, [axios, refetch]
     )
 
 
@@ -39,7 +40,12 @@ const SubmittedAssignments = () => {
 
                     < div className="pendingSubmissionCon">
                         {
-                            data?.map(data => <AllSubmissionCard key={data._id} data={data}></AllSubmissionCard>)
+                            data?.map(data => <AllSubmissionCard
+                                key={data._id}
+                                data={data}
+                                refetch={refetch}
+                                setReFertch={setReFertch}
+                            ></AllSubmissionCard>)
                         }
                     </div>
 

@@ -4,7 +4,7 @@ import useAxios from "../../useAxios";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 
-const AllSubmissionCard = ({ data }) => {
+const AllSubmissionCard = ({ data, setReFertch, refetch }) => {
     const { _id, assignmentLink, submissionNote, submitedBy, submiterName, submitedOn, status, assignmentName, totalMarks, ObtainMarks } = data
 
     const [showPreview, SetShowPreview] = useState(false)
@@ -24,6 +24,11 @@ const AllSubmissionCard = ({ data }) => {
 
         const data = { feedback, givenMarks }
         axios.put(`/giveMark/${_id}`, data)
+            .then(res => {
+                toast.success("successfully assignment checked")
+                setShowGiveMark(false)
+                setReFertch(!refetch)
+            })
 
     }
 

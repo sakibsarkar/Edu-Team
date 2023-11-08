@@ -68,6 +68,7 @@ const AssignmentDetails = () => {
                     toast.success("successfully submitted")
                     navigate("/myassignments")
                     setShowForm(false)
+                    document.body.classList.remove("noScroll")
                 }
             })
     }
