@@ -20,3 +20,24 @@
 .myAssignmentCard p a {
     text-decoration: underline;
 }
+
+
+
+
+@media screen and (max-width: 400px) {
+
+
+    .myAssignmentCard {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width: 515px) {
+
+
+    .myAssignmentCard {
+        width: 400px;
+        margin: auto;
+    }
+}

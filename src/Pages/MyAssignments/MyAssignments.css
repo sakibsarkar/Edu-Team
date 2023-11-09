@@ -55,15 +55,19 @@
     }
 }
 
-@media screen and (min-width: 410px) and (max-width: 515px) {
+
+@media screen and (max-width: 400px) {
     .myCreations {
-        grid-template-columns: repeat(1, 400px);
+        grid-template-columns: repeat(1, 90%);
         justify-content: center;
     }
 
-    .myAssignmentCard {
-        width: 500px;
-        margin: auto;
+}
+
+@media screen and (min-width:400px) and (max-width: 515px) {
+    .myCreations {
+        grid-template-columns: repeat(1, 400px);
+        justify-content: center;
     }
 }
 
