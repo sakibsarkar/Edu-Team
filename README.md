@@ -1,6 +1,10 @@
 # Assignment -11
 ## Live link -[EduTeam](https://assignment-11-a9fb7.web.app)
 
+### About my projects
+
+This application is made for managing assignment's , The app likely has a user-friendly interface, making it easy for students to create assignments and submit their assignment links. the examiner can check assignments and can give a mark and a feedback for that submited assignment. In this site i implemented JWT (JSON Web Tokens) for data security, which ensures that user authentication and data transmission are secure.
+
 ### Features
 
 - Responsive for all device
