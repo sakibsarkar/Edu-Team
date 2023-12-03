@@ -11,14 +11,17 @@ const AdminPrivate = ({ children }) => {
     const [roleLoading, setRoleLoading] = useState(true)
     const axios = useAxios()
 
-    axios.get("/user/role")
+    axios.get(`/user/role?email=${user?.email}`)
         .then(({ data }) => {
             setRole(data.role)
             setRoleLoading(false)
         })
 
 
-    if (loading || roleLoading) {
+    if (loading) {
+        return <div>add a Loader</div>
+    }
+    if (roleLoading) {
         return <div>add a Loader</div>
     }
 
