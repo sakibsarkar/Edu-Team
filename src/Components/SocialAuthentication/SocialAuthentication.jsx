@@ -1,5 +1,5 @@
 import "./SocialAuthentication.css";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useContext } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -15,10 +15,10 @@ const SocialAuthentication = ({ LOCATION }) => {
 
     const mediaLogin = async (media) => {
         try {
-            const signin = await media()
-
-            console.log(signin?.user.email)
-            axios.post("/user/token", { email: signin?.user?.email ? signin?.user?.email : signin?.user?.displayName })
+            const { user } = await media()
+            await axios.post("/user/token", { email: user?.email ? user?.email : user?.displayName })
+            const userObj = { name: user?.displayName, email: user?.email ? user.email : "no email", role: "user" }
+            await axios.put("/new/user", userObj)
             navigate(LOCATION?.state ? LOCATION.state : "/")
 
         }

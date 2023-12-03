@@ -1,7 +1,7 @@
 import "./Assignment.css";
 import AssignmentCard from "../../Components/AssignmentCard/AssignmentCard";
 import Loader from "../../Components/Loader/Loader";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useCallback, useEffect, useState } from "react";
 import { BsClipboardPlus } from "react-icons/bs";
 import { Link } from "react-router-dom";

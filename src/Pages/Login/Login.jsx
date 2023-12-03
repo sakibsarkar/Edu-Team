@@ -1,7 +1,7 @@
 import "./Login.css";
 import SocialAuthentication from "../../Components/SocialAuthentication/SocialAuthentication";
 import toast from "react-hot-toast";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
@@ -23,6 +23,7 @@ const Login = () => {
             .then(res => {
                 setToast(toast.success("Successfuly loged in"))
                 axios.post("/user/token", { email: res?.user?.email })
+
                 navigate(LOCATION.state ? LOCATION.state : "/")
             })
             .catch(err => setToast(toast.error("invalid email or password")))

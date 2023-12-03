@@ -1,6 +1,6 @@
 import "./AllSubmissionCard.css";
 import toast from "react-hot-toast";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 

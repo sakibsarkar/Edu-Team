@@ -1,7 +1,7 @@
 import "./AssignmentDetails.css";
 import Loader from "../../Components/Loader/Loader";
 import toast, { LoaderIcon } from "react-hot-toast";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import validUrl from "valid-url";
 import { useContext, useEffect, useState } from "react";
 import { FaHandPointRight } from "react-icons/fa";

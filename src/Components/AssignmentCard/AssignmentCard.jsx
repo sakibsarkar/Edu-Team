@@ -1,6 +1,6 @@
 import "./AssignmentCard.css";
 import toast from "react-hot-toast";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useContext } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { LuView } from "react-icons/lu";

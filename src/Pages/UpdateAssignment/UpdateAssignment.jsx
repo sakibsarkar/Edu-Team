@@ -1,7 +1,7 @@
 import "./UpdateAssignment.css";
 import DatePicker from "react-datepicker";
 import toast from "react-hot-toast";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";

@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import useAxios from "../useAxios";
+import useAxios from "../Hooks & functions/useAxios";
 import { useContext, useEffect, useState } from "react";
 import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
 import { BsFillFilePersonFill } from "react-icons/bs";

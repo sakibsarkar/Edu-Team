@@ -1,7 +1,7 @@
 import "./SubmittedAssignments.css";
 import AllSubmissionCard from "../../Components/AllSubmissionCard/AllSubmissionCard";
 import toast from "react-hot-toast";
-import useAxios from "../../useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 

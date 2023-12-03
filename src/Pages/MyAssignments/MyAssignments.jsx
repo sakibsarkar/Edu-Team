@@ -1,7 +1,7 @@
 import "./MyAssignments.css";
 import MyAssignmentCards from "../MyAssignmentCards/MyAssignmentCards";
 import toast from "react-hot-toast";
-import useAxios from "../../../src/useAxios";
+import useAxios from "../../Hooks & functions/useAxios";
 import { useContext, useEffect, useState } from "react";
 import { Oval } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
