@@ -85,7 +85,7 @@ const CreateAssignment = () => {
 
 
         const assignment = { title, thumbURL, marks: parseInt(marks), description, uploadedBy: email, dueDate: submitedDate, difficulty: difficulty }
-        axios.post("/user/assignment/post", assignment)
+        axios.post(`/user/assignment/post?email=${user?.email}`, assignment)
             .then(res => {
                 toast.success("success")
                 // navigate("/assignments")

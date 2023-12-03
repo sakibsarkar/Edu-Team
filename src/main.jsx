@@ -1,4 +1,5 @@
 import "./index.css";
+import AdminPrivate from "./Components/PrivateRoute/AdminPrivate";
 import AssignmentDetails from "./Pages/AssignmentDetails/AssignmentDetails";
 import Assignments from "./Pages/Assignments/Assignments";
 import AuthProvider from "./AuthProvider/AuthProvider";
@@ -36,7 +37,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/createAssignments",
-        element: <PrivateRoute><CreateAssignment></CreateAssignment></PrivateRoute>
+        element: <AdminPrivate><CreateAssignment></CreateAssignment></AdminPrivate>
       },
       {
         path: "/assignments",
@@ -52,12 +53,12 @@ const routes = createBrowserRouter([
       },
       {
         path: "/subAssignments",
-        element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>
+        element: <AdminPrivate><SubmittedAssignments></SubmittedAssignments></AdminPrivate>
       },
       {
         path: "/assignment/update/:id",
         loader: (e) => fetch(`http://localhost:5000/api/assignment/${e.params.id}`, { credentials: "include" }),
-        element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>
+        element: <AdminPrivate><UpdateAssignment></UpdateAssignment></AdminPrivate>
       }
 
     ]

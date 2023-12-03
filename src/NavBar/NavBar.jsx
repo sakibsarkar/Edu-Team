@@ -15,7 +15,19 @@ const NavBar = () => {
     const [showUserDetails, setShowUserDetails] = useState(false)
     const [showDrawer, SetShowDrawer] = useState(false)
 
+    const [role, setRole] = useState("")
     const axios = useAxios()
+
+    axios.get(`/user/role?email=${user?.email}`)
+        .then(({ data }) => {
+            setRole(data.role)
+        })
+        .catch(errr => {
+            setRole("viewer")
+        })
+
+
+
 
 
     const handleLogout = async () => {
@@ -48,10 +60,26 @@ const NavBar = () => {
                 </div>
                 <ul>
                     <li className=""><NavLink className={"navLinks"} to={"/"}><AiOutlineHome /> Home</NavLink></li>
+
                     <li className=""><NavLink className={"navLinks"} to={"/assignments"}><CgNotes />Assignments</NavLink></li>
-                    <li className=""><NavLink className={"navLinks"} to={"/createAssignments"}><FaNotesMedical /> Create Assignment</NavLink></li>
-                    <li className=""><NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink></li>
-                    <li className=""><NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment</NavLink></li>
+
+                    {
+                        role == "admin" ?
+                            <>
+                                <li className=""><NavLink className={"navLinks"} to={"/createAssignments"}><FaNotesMedical /> Create Assignment</NavLink></li>
+                                <li className=""><NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment</NavLink></li>
+                            </>
+                            :
+                            ""
+                    }
+
+                    {
+                        role == "user" ?
+
+                            <li className=""><NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink></li>
+                            :
+                            ""
+                    }
                 </ul>
 
                 {/* user dynamic section */}
@@ -106,10 +134,26 @@ const NavBar = () => {
 
                             <div className="drawerLinks">
                                 <NavLink className={"navLinks"} to={"/"}><AiOutlineHome />Home</NavLink>
+
                                 <NavLink className={"navLinks"} to={"/assignments"}><CgNotes />Assignments</NavLink>
-                                <NavLink className={"navLinks"} to={"/createAssignments"}><FaNotesMedical /> Create Assignment</NavLink>
-                                <NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink>
-                                <NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment Links</NavLink>
+
+                                {
+                                    role == "admin" ?
+                                        <>
+
+                                            <NavLink className={"navLinks"} to={"/createAssignments"}><FaNotesMedical /> Create Assignment</NavLink>
+                                            <NavLink className={"navLinks"} to={"/subAssignments"}><PiLinkSimpleHorizontalBold />Submitted Assignment Links</NavLink>
+                                        </>
+                                        : ""
+                                }
+
+                                {
+                                    role == "user" ?
+
+                                        <NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink>
+                                        :
+                                        ""
+                                }
                                 {user ? "" : <NavLink className={"navLinks"} to={"/login"}>Log in</NavLink>}
                                 {user ? "" : <NavLink className={"navLinks"} to={"/signup"}>register</NavLink>}
                             </div>
