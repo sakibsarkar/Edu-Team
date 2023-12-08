@@ -1,5 +1,6 @@
-# MERN Project
-## Live link -[EduTeam](https://assignment-11-a9fb7.web.app)
+# Edu Team
+## Live link - [Edu Team](https://assignment-11-a9fb7.web.app)
+## server repository link - [Edu-Team_Server](https://github.com/sakibsarkar/Edu-Team_Server)
 
 ### About my projects
 
@@ -50,4 +51,3 @@ This application is made for managing assignment's , The app likely has a user-f
        2. Animated buttons
        3. A drawer for small devices to access all the nav links
 ## 
-    
