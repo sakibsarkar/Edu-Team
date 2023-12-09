@@ -1,13 +1,13 @@
 # Edu Team
 ## Live link - [Edu Team](https://assignment-11-a9fb7.web.app)
-## server repository link - [Edu-Team_Server](https://github.com/sakibsarkar/Edu-Team_Server)
+## 🔗Server repository - [Edu-Team_Server](https://github.com/sakibsarkar/Edu-Team_Server)
 
-### About my projects
+### 💡 About my projects
 
 This application is made for managing assignment's , The app likely has a user-friendly interface, making it easy for students to create assignments and submit their assignment links. the examiner can check assignments and can give a mark and a feedback for that submited assignment. In this site i implemented JWT (JSON Web Tokens) for data security, which ensures that user authentication and data transmission are secure.
 ## 
 
-## Technology used in this project
+## ⚙️Technology used in this project
 
 ### Frontend
  - React
@@ -25,18 +25,8 @@ This application is made for managing assignment's , The app likely has a user-f
   - Dotenv
   - CORS
 
-# Features
 
-- Responsive Design
-- User-Centric Dashboard
-- Announcement System.
-- Coupon Management
-- Secure Payment Processing
-- while creating account user must have to use strong password
-- Role based Dashboard
-## 
-
-### Features
+### 🪶  Features
 
 - Responsive for all device
 - Assignment can be created by the admin (examiner) and only admin admin have access to delete or update assignments
