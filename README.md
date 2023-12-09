@@ -26,7 +26,7 @@ This application is made for managing assignment's , The app likely has a user-f
   - CORS
 
 
-### 🪶  Features
+## 🪶  Features
 
 - Responsive for all device
 - Assignment can be created by the admin (examiner) and only admin admin have access to delete or update assignments
