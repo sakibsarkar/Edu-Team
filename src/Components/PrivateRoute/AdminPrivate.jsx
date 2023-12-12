@@ -21,13 +21,14 @@ const AdminPrivate = ({ children }) => {
     if (loading) {
         return <div>add a Loader</div>
     }
+    if (!user) {
+        return <Navigate state={location.pathname} to={"/login"}></Navigate>;
+    }
     if (roleLoading) {
         return <div>add a Loader</div>
     }
 
-    if (!user) {
-        return <Navigate state={location.pathname} to={"/login"}></Navigate>;
-    }
+
     if (role == "admin") {
         return children
     }
