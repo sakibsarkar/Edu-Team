@@ -73,13 +73,10 @@ const NavBar = () => {
                             ""
                     }
 
-                    {
-                        role == "user" ?
 
-                            <li className=""><NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink></li>
-                            :
-                            ""
-                    }
+                    <li className=""><NavLink className={"navLinks"} to={"/myAssignments"}><BsFillFilePersonFill /> My Assignments</NavLink></li>
+
+
                 </ul>
 
                 {/* user dynamic section */}
